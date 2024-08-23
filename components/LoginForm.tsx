@@ -83,13 +83,16 @@ const LoginForm = () => {
       setErrors(allErrors);
     } else {
       try {
-        const response = await fetch("http://localhost:4000/api/users/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          "https://formvalidation-server.onrender.com/api/users/login",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
         const data = await response.json();
 

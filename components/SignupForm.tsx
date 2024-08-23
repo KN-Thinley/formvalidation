@@ -146,7 +146,7 @@ const SignUpForm = () => {
       console.log("formdata", formData);
       try {
         const response = await fetch(
-          "http://localhost:4000/api/users/register",
+          "https://formvalidation-server.onrender.com/api/users/register",
           {
             method: "POST",
             headers: {
